@@ -12,6 +12,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   font-family: 'pixel';
+
+  transition: .55s ease all;
+  
 }
 
 a {

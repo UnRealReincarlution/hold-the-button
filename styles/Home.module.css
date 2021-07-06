@@ -31,7 +31,7 @@
   padding: 2rem;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 
@@ -60,10 +60,42 @@
 
   text-align: center;
   margin: 0;
+
+  transition-delay: 1s;
+}
+
+.buttonNotBeingHeld h2 {
+  opacity: 1 !important;
+  font-size: 2.5rem !important;
+  font-weight: 600;
+
+  color: rgb(19, 21, 32);
+  text-align: center;
+
+  margin: 0;
+}
+
+.buttonNotBeingHeld h6 {
+  opacity: 1 !important;
+
+  font-size: 2rem !important;
+  font-weight: 300;
+  color: rgb(19, 21, 32);
+
+  text-align: center;
+  margin: 0;
+}
+
+.buttonNotBeingHeld h1 {
+  font-size: 5rem;
+  text-align: center;
 }
 
 .buttonBeingHeld p {
-  opacity: 0;
+  opacity: 0 !important;
+  text-align: center;
+
+  transition-delay: 1s;
 }
 
 .buttonNotBeingHeld h3 {
@@ -75,6 +107,8 @@
 
   text-align: center;
   margin: 0;
+
+  opacity: 0;
 }
 
 .clockTimer h3 {
@@ -88,12 +122,6 @@
   transition: .55s ease all;
 }
 
-.clockTimer p {
-  font-size: 1rem;
-  text-align: center;
-  opacity: 0;
-}
-
 .button {
   display: flex;
   flex-direction: column;
@@ -103,10 +131,48 @@
 
   position: relative;
   width: 100%;
+
+  margin-top: 5rem;
+
+  animation: slideIn 1s ease 0s 1 normal;
+  z-index: 50;
+}
+
+.button p {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+
+  transform: rotateZ(20deg);
+
+  animation: colorIn 5s ease 0s 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes colorIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .button img {
-  image-rendering: pixelated;
+  image-rendering: pixelated !important;
   user-select: none;
 }
 
@@ -219,5 +285,10 @@
 
 .anoyingPhrase > div {
   font-size: 1rem;
-  color: black;
+  color: rgba(0, 0, 0, 0.219);
+
+  position: absolute;
+  width: 100%;
+
+  z-index: 0;
 }
