@@ -1,0 +1,223 @@
+.clockTimer {
+  font-size: 5rem;
+  font-weight: 600;
+
+  user-select: none;
+
+  height: 100vh;
+  width: 100vw;
+
+  overflow: hidden;
+}
+
+.divPage {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  background-color: #b1b1b173;
+}
+
+.divPage > h1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  padding: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.clockTimer:hover {
+  cursor: pointer;
+}
+
+.buttonBeingHeld h3 {
+  transform: translateY(-175px);
+
+  font-size: 7rem;
+  font-weight: 300;
+  color: rgb(19, 21, 32);
+
+  text-align: center;
+  margin: 0;
+}
+
+.buttonNotBeingHeld p {
+  transform: translateY(-175px);
+  opacity: 1 !important;
+
+  font-size: 2rem !important;
+  font-weight: 300;
+  color: rgb(19, 21, 32);
+
+  text-align: center;
+  margin: 0;
+}
+
+.buttonBeingHeld p {
+  opacity: 0;
+}
+
+.buttonNotBeingHeld h3 {
+  transform: translateY(25px);
+
+  font-size: 7rem;
+  font-weight: 300;
+  color: rgb(19, 21, 32);
+
+  text-align: center;
+  margin: 0;
+}
+
+.clockTimer h3 {
+  font-size: 7rem;
+  font-weight: 300;
+  color: rgb(19, 21, 32);
+
+  text-align: center;
+  margin: 0;
+
+  transition: .55s ease all;
+}
+
+.clockTimer p {
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 100%;
+}
+
+.button img {
+  image-rendering: pixelated;
+  user-select: none;
+}
+
+.button .buttonButton {
+  position: absolute;
+  margin: auto;
+
+  width: 40%;
+
+  left: 0%;
+  right: 0%;
+
+  top: -5%;
+}
+
+.button .buttonTopper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 500px;
+  border-radius: 50%;
+
+  height: 50px;
+  background-color: white;
+}
+
+.button .buttonBase:first-of-type {
+  width: 500px;
+  border-radius: 0;
+
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+
+  height: 50px;
+  background-color: rgb(194, 198, 202);
+}
+
+.button .buttonBase:not(:first-of-type) {
+  width: 500px;
+  border-radius: 0;
+
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+
+  height: 60px;
+  background-color: rgb(194, 198, 202);
+}
+
+.buttonButton * {
+  width: 100% !important;
+
+  height: 20px !important;
+}
+
+.buttonButton .buttonBase {
+  background-color: rgb(139, 6, 28) !important;
+}
+
+.buttonButton .buttonTopper {
+  background-color: rgb(177, 54, 74) !important;
+}
+
+.buttonHeld {
+  height: 20px !important;
+}
+
+.buttonHeld * {
+  height: 20px !important;  
+}
+
+.buttonReleased {
+  height: 40px !important;
+
+  top: -35% !important;
+}
+
+.buttonReleased * {
+  height: 40px !important;
+}
+
+.buttonReleased > .buttonBase:first-of-type {
+  width: 500px;
+  border-radius: 0;
+
+  border-top-left-radius: 125%;
+  border-top-right-radius: 125%;
+
+  height: 50px;
+  background-color: rgb(194, 198, 202);
+}
+
+.buttonReleased > .buttonBase:not(:first-of-type) {
+  width: 500px;
+  border-radius: 0;
+
+  border-bottom-left-radius: 120%;
+  border-bottom-right-radius: 120%;
+
+  height: 60px;
+  background-color: rgb(194, 198, 202);
+}
+
+.anoyingPhrase {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+}
+
+.anoyingPhrase > div {
+  font-size: 1rem;
+  color: black;
+}
